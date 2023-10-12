@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Style for the disabled input */
+        
+        input[type="text"]:disabled {
+            background-color: #e8e6e6;
+            /* Change the background color to gray */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Checkbox -->
+    <label for="enableInput">Enable Input:</label>
+    <input type="checkbox" id="enableInput">
+
+    <!-- Text Input -->
+    <input type="text" id="textInput" placeholder="Type here..." disabled>
+
+    <script>
+        // JavaScript to enable/disable the text input based on checkbox state
+        const enableInputCheckbox = document.getElementById("enableInput");
+        const textInput = document.getElementById("textInput");
+
+        enableInputCheckbox.addEventListener("change", function() {
+            if (this.checked) {
+                textInput.disabled = false;
+            } else {
+                textInput.disabled = true;
+            }
+        });
+    </script>
+</body>
+
+</html>
